@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "AprenderJquery";
+}
+<script src="~/Scripts/jquery-2.2.3.js"></script>
+<h2>AprenderJquery</h2>
+<div>
+    <input type="button" value="Ver dato JSON" onclick="return getJson();" />
+</div>
+<script type="text/javascript">
+        function getJson() {
+            $.getJSON("/Customer/getJson", null, Display1)
+            return true;
+        }
+        function Display1(data){
+            alert(data.CustomerCode);
+        }
+</script>
+
